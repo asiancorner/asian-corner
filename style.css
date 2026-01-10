@@ -14,8 +14,13 @@ header h1 {
   letter-spacing: 2px;
 }
 .order {
+  color: rgb(23, 101, 43);
+}
+
+.phone {
   color: rgb(243, 125, 17);
 }
+
 .promo {
   color: rgb(23, 101, 43);
   font-weight: bold;
