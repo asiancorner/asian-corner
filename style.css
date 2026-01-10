@@ -42,10 +42,16 @@ header h1 {
 .contact-buttons {
   margin-top: 8px;
 }
+
 .contact-buttons img {
-  width: 32px;
   height: 32px;
-  object-fit: contain;
+  width: auto;
   margin: 0 8px;
   vertical-align: middle;
 }
+
+/* WhatsApp icon has extra padding inside the image */
+.contact-buttons img[alt="WhatsApp"] {
+  height: 28px;
+}
+
