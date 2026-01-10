@@ -49,9 +49,6 @@ header h1 {
   margin: 0 8px;
   vertical-align: middle;
 }
-
-/* WhatsApp icon has extra padding inside the image */
 .contact-buttons img[alt="WhatsApp"] {
   height: 28px;
 }
-
