@@ -42,9 +42,10 @@ header h1 {
 .contact-buttons {
   margin-top: 10px;
 }
-
 .contact-buttons img {
-  width: 40px;
-  margin: 0 10px;
-  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  margin: 0 8px;
+  vertical-align: middle;
 }
