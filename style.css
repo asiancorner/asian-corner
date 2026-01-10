@@ -38,3 +38,12 @@ header {
   height: 150px;
   object-fit: contain;
 }
+.contact-buttons {
+  margin-top: 10px;
+}
+
+.contact-buttons img {
+  width: 40px;
+  margin: 0 10px;
+  cursor: pointer;
+}
