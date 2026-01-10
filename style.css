@@ -27,6 +27,14 @@ header h1 {
   margin-bottom: 30px;
 }
 
+.free {
+  color: rgb(243, 125, 17); /* orange */
+}
+
+.promo-text {
+  color: rgb(23, 101, 43); /* green */
+}
+
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
