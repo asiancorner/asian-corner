@@ -12,6 +12,9 @@ header h1 {
   font-family: "Lucida Handwriting", "Comic Sans MS", cursive;
   font-size: 36px;
   letter-spacing: 2px;
+  color: rgb(23, 101, 43); /* green logo */
+}
+
 }
 .order {
   color: rgb(23, 101, 43);
