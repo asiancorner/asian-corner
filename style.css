@@ -1,5 +1,4 @@
 body {
-body {
   font-family: Arial, sans-serif; /* default, will refine later */
   background-image: url("images/background.jpg");
   background-repeat: repeat;
@@ -31,11 +30,10 @@ header h1 {
   gap: 20px;
   padding: 20px 40px 40px;
 }
-
 .product {
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 20px;
+  border-radius: 12px;
 }
 
 .product img {
