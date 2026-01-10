@@ -56,3 +56,8 @@ header h1 {
 .contact-buttons img[alt="WhatsApp"] {
   height: 28px;
 }
+.order,
+.promo {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
