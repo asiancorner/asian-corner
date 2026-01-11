@@ -165,16 +165,25 @@ header h1 {
 /* ================= MOBILE FINE-TUNE ================= */
 
 @media (max-width: 480px) {
+
+  .product {
+    padding: 16px 14px;
+  }
+
   .product img {
-    height: 240px;
+    height: 280px;
   }
 
   .product h3 {
-    font-size: 21px;
+    font-size: 22px;
   }
 
   .product p {
     font-size: 16px;
+  }
+
+  .price {
+    font-size: 17px;
   }
 }
 
