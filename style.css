@@ -136,7 +136,6 @@ header h1 {
   font-weight: bold;
   color: rgb(243, 125, 17);
 }
-
 /* ================= MOBILE FINE-TUNE ================= */
 
 @media (max-width: 480px) {
@@ -151,23 +150,22 @@ header h1 {
   .product p {
     font-size: 16px;
   }
+}
 
-  /* ================= PRICE STATES ================= */
+/* ================= PRICE STATES ================= */
 
-/* Products WITHOUT price */
-.product[data-price=""] .price {
-  font-size: 15px;
+/* "Price coming soon" */
+.price {
+  font-size: 16px;
   font-weight: 600;
   color: #ffd28a;
   margin-top: 8px;
   opacity: 0.95;
 }
 
-/* Products WITH price */
-.product:not([data-price=""]) .price {
+/* Real prices (override when actual € exists) */
+.price:not(:contains("coming")) {
   font-size: 20px;
   font-weight: bold;
   color: rgb(243, 125, 17);
-}
-
 }
