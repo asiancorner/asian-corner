@@ -11,37 +11,41 @@ body {
 /* HEADER */
 
 header {
-  padding: 20px 20px 12px;
+  padding: 24px 20px 14px;
 }
 
+/* LOGO */
+
 .logo {
-  width: 130px;
+  width: 155px;              /* slightly bigger */
   display: block;
-  margin: 10px auto 6px; /* closer to title */
+  margin: 26px auto 8px;     /* moved DOWN closer to title */
 }
+
+/* TITLE */
 
 header h1 {
   font-family: "Lucida Handwriting", "Comic Sans MS", cursive;
   font-size: 34px;
   letter-spacing: 2px;
   color: rgb(23, 101, 43);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
-/* TEXTS UNDER LOGO */
+/* TEXTS UNDER TITLE */
 
 .order-text {
   color: rgb(23, 101, 43);
   font-size: 17px;
   font-weight: bold;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .order-alt {
   color: rgb(23, 101, 43);
   font-size: 16px;
   font-weight: bold;
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
 .phone {
@@ -52,15 +56,15 @@ header h1 {
 /* CONTACT BUTTONS */
 
 .contact-buttons {
-  margin: 14px 0;
+  margin: 12px 0 10px;
 }
 
 .contact-buttons img {
-  width: 56px;
-  height: 56px;
+  width: 60px;               /* same size for both */
+  height: 60px;
   margin: 0 14px;
   vertical-align: middle;
-  object-fit: contain; /* prevents distortion */
+  object-fit: contain;       /* fixes Viber distortion */
 }
 
 /* PROMO */
@@ -69,7 +73,7 @@ header h1 {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-size: 16px;
   font-weight: bold;
-  margin: 16px 0 32px;
+  margin: 10px 0 28px;       /* closer to "or send us..." */
 }
 
 .free {
@@ -152,7 +156,7 @@ header h1 {
   }
 
   .contact-buttons img {
-    width: 64px;
-    height: 64px;
+    width: 66px;
+    height: 66px;
   }
 }
