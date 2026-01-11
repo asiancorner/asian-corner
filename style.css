@@ -15,8 +15,8 @@ header {
 }
 
 .logo {
-  width: 140px;
-  margin-bottom: 6px;
+  width: 130px;
+  margin-bottom: 4px;
 }
 
 header h1 {
@@ -24,7 +24,7 @@ header h1 {
   font-size: 34px;
   letter-spacing: 2px;
   color: rgb(23, 101, 43);
-  margin: 4px 0 8px;
+  margin: 4px 0 6px;
 }
 
 .order-text,
@@ -45,8 +45,8 @@ header h1 {
 }
 
 .promo {
-  margin-top: 6px;
-  margin-bottom: 16px;
+  margin-top: 4px;
+  margin-bottom: 14px;
 }
 
 .free {
@@ -60,7 +60,7 @@ header h1 {
 /* ================= CONTACT BUTTONS ================= */
 
 .contact-buttons {
-  margin: 6px 0 10px;
+  margin: 6px 0 8px;
 }
 
 .contact-buttons img {
@@ -75,10 +75,10 @@ header h1 {
 .products {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 16px;
 
-  padding: 26px 18px 36px;
-  margin: 0 auto 40px;
+  padding: 22px 14px 30px;
+  margin: 0 auto 36px;
   max-width: 1100px;
 
   background: rgba(255, 255, 255, 0.6);
@@ -89,7 +89,7 @@ header h1 {
 
 .product {
   background: rgba(0, 0, 0, 0.65);
-  padding: 24px 16px;
+  padding: 16px 14px;
   border-radius: 16px;
   color: #ffffff;
 
@@ -97,7 +97,7 @@ header h1 {
   flex-direction: column;
   align-items: center;
 
-  min-height: 340px;
+  min-height: auto;
 
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -108,24 +108,24 @@ header h1 {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
 }
 
-/* BIGGER PRODUCT IMAGE */
+/* MUCH BIGGER PRODUCT IMAGE */
 .product img {
-  height: 190px;
+  height: 220px;
   width: auto;
   max-width: 100%;
   object-fit: contain;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 /* PRODUCT NAME */
 .product h3 {
-  font-size: 19px;
+  font-size: 20px;
   margin: 6px 0 4px;
 }
 
 /* PRODUCT DESCRIPTION */
 .product p {
-  font-size: 15px;
+  font-size: 16px;
   margin: 2px 0;
 }
 
@@ -137,14 +137,18 @@ header h1 {
   color: rgb(243, 125, 17);
 }
 
-/* ================= MOBILE TWEAKS ================= */
+/* ================= MOBILE FINE-TUNE ================= */
 
 @media (max-width: 480px) {
   .product img {
-    height: 200px;
+    height: 240px;
   }
 
-  .product {
-    min-height: 360px;
+  .product h3 {
+    font-size: 21px;
+  }
+
+  .product p {
+    font-size: 16px;
   }
 }
