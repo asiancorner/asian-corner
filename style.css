@@ -11,13 +11,12 @@ body {
 /* ---------- HEADER ---------- */
 
 header {
-  padding: 22px 20px 14px;
-  margin-bottom: 12px;
+  padding: 22px 20px 10px;
 }
 
 .logo {
-  width: 140px;            /* reduced from before */
-  margin-bottom: 6px;      /* closer to title */
+  width: 140px;
+  margin-bottom: 6px;
 }
 
 header h1 {
@@ -34,10 +33,7 @@ header p {
   font-weight: bold;
 }
 
-.order-text {
-  color: rgb(23, 101, 43);
-}
-
+.order-text,
 .order-alt {
   color: rgb(23, 101, 43);
 }
@@ -59,11 +55,27 @@ header p {
   object-fit: contain;
 }
 
+/* ---------- PROMO ---------- */
+
+.promo {
+  margin: 6px auto 18px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.free {
+  color: rgb(243, 125, 17);
+}
+
+.promo-text {
+  color: rgb(23, 101, 43);
+}
+
 /* ---------- PRODUCTS GRID ---------- */
 
 .products {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* ALWAYS 2 per row on mobile */
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding: 24px 16px 32px;
   margin: 0 auto 30px;
@@ -86,7 +98,6 @@ header p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
 
   min-height: 360px;
 
@@ -102,8 +113,8 @@ header p {
 
 .product img {
   width: 100%;
-  max-width: 160px;     /* BIGGER image */
-  height: 180px;        /* BIGGER image */
+  max-width: 160px;
+  height: 180px;
   object-fit: contain;
   margin-bottom: 14px;
 }
@@ -112,12 +123,12 @@ header p {
 
 .product h3 {
   margin: 8px 0 6px;
-  font-size: 20px;      /* bigger name */
+  font-size: 20px;
 }
 
 .product p {
   margin: 4px 0;
-  font-size: 15px;      /* bigger description */
+  font-size: 15px;
 }
 
 /* ---------- PRICE ---------- */
@@ -126,10 +137,10 @@ header p {
   margin-top: 8px;
   color: rgb(243, 125, 17);
   font-weight: bold;
-  font-size: 20px;      /* more emphasis */
+  font-size: 20px;
 }
 
-/* ---------- MOBILE FINE-TUNING ---------- */
+/* ---------- MOBILE ---------- */
 
 @media (max-width: 480px) {
   .product {
