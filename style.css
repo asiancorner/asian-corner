@@ -17,9 +17,9 @@ header {
 /* LOGO */
 
 .logo {
-  width: 230px;              /* 1.5x bigger */
+  width: 160px;               /* reduced ~30% */
   display: block;
-  margin: 18px auto 4px;     /* closer to title */
+  margin: 14px auto 4px;      /* closer to title */
 }
 
 /* TITLE */
@@ -60,11 +60,16 @@ header h1 {
 }
 
 .contact-buttons img {
-  width: 64px;               /* force equal size */
+  width: 64px;
   height: 64px;
   margin: 0 16px;
-  object-fit: contain;       /* fixes Viber distortion */
+  object-fit: contain;
   vertical-align: middle;
+}
+
+/* FIX VIBER ICON VISUAL SIZE */
+.contact-buttons img[alt="Viber"] {
+  transform: scale(1.15);   /* compensates for empty padding */
 }
 
 /* PROMO */
@@ -73,7 +78,7 @@ header h1 {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-size: 16px;
   font-weight: bold;
-  margin: 6px 0 24px;        /* closer to text above */
+  margin: 6px 0 24px;
 }
 
 .free {
