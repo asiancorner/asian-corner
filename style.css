@@ -151,4 +151,23 @@ header h1 {
   .product p {
     font-size: 16px;
   }
+
+  /* ================= PRICE STATES ================= */
+
+/* Products WITHOUT price */
+.product[data-price=""] .price {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffd28a;
+  margin-top: 8px;
+  opacity: 0.95;
+}
+
+/* Products WITH price */
+.product:not([data-price=""]) .price {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(243, 125, 17);
+}
+
 }
