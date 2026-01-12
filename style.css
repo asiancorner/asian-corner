@@ -89,18 +89,19 @@ header h1 {
 
 .product {
   background: rgba(0, 0, 0, 0.65);
-  padding: 16px 14px;
+  padding: 18px 16px;
   border-radius: 16px;
   color: #ffffff;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  min-height: auto;
+  gap: 10px;
 
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  overflow: hidden; /* safety for object-fit */
 }
 
 .product:hover {
@@ -108,58 +109,39 @@ header h1 {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
 }
 
-/* MUCH BIGGER PRODUCT IMAGE */
+/* ================= PRODUCT IMAGE (STEP 4.2 FIX) ================= */
+
 .product img {
-  height: 220px;
-  width: auto;
+  width: 100%;
   max-width: 100%;
-  object-fit: contain;
+  aspect-ratio: 1 / 1;     /* reserves space before load */
+  object-fit: contain;     /* no distortion */
+  display: block;
   margin-bottom: 10px;
 }
 
-/* PRODUCT NAME */
+/* ================= PRODUCT TEXT ================= */
+
 .product h3 {
   font-size: 20px;
-  margin: 6px 0 4px;
-}
-
-/* PRODUCT DESCRIPTION */
-.product p {
-  font-size: 16px;
-  margin: 2px 0;
-}
-
-/* PRICE */
-.price {
-  margin-top: 6px;
-  font-size: 18px;
-  font-weight: bold;
-  color: rgb(243, 125, 17);
-}
-
-/* ================= PRODUCT CARD DENSITY ================= */
-
-.product {
-  padding: 18px 16px;
-  gap: 10px;
-}
-
-/* Image gets more visual weight */
-.product img {
-  max-height: 260px;
-  margin-bottom: 10px;
-}
-
-/* Title stronger */
-.product h3 {
-  margin-top: 4px;
+  margin: 4px 0;
   font-weight: 700;
 }
 
-/* Description tighter */
 .product p {
+  font-size: 16px;
   margin: 4px 0;
   line-height: 1.25;
+}
+
+/* ================= PRICE ================= */
+
+.price {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffd28a;
+  opacity: 0.95;
 }
 
 /* ================= MOBILE FINE-TUNE ================= */
@@ -168,10 +150,6 @@ header h1 {
 
   .product {
     padding: 16px 14px;
-  }
-
-  .product img {
-    height: 280px;
   }
 
   .product h3 {
@@ -185,22 +163,4 @@ header h1 {
   .price {
     font-size: 17px;
   }
-}
-
-/* ================= PRICE STATES ================= */
-
-/* "Price coming soon" */
-.price {
-  font-size: 16px;
-  font-weight: 600;
-  color: #ffd28a;
-  margin-top: 8px;
-  opacity: 0.95;
-}
-
-/* Real prices (override when actual € exists) */
-.price:not(:contains("coming")) {
-  font-size: 20px;
-  font-weight: bold;
-  color: rgb(243, 125, 17);
 }
