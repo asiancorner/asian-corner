@@ -1,7 +1,5 @@
 body {
-  background: red !important;
-}
-  font-family: Arial, sans-serif;
+font-family: Arial, sans-serif;
   background-image: url("images/background.jpg");
   background-repeat: repeat;
   background-size: auto;
@@ -15,6 +13,17 @@ body {
 header {
   padding: 24px 20px 12px;
 }
+
+header,
+header p {
+  text-align: center;
+}
+
+header {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 .logo {
   width: 130px;
@@ -69,10 +78,18 @@ header h1 {
   gap: 16px; /* spacing between icons */
 }
 
+.contact-buttons a {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .contact-buttons img {
-  width: 42px;
-  height: 42px;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* ================= PRODUCTS GRID ================= */
