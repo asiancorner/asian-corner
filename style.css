@@ -1,5 +1,7 @@
+/* ================= GLOBAL ================= */
+
 body {
-font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
   background-image: url("images/background.jpg");
   background-repeat: repeat;
   background-size: auto;
@@ -12,18 +14,13 @@ font-family: Arial, sans-serif;
 
 header {
   padding: 24px 20px 12px;
-}
-
-header,
-header p {
-  text-align: center;
-}
-
-header {
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
-
 
 .logo {
   width: 130px;
@@ -47,31 +44,19 @@ header h1 {
   margin: 6px 0;
 }
 
-.order-text {
+.order-text,
+.promo-text {
   color: rgb(23, 101, 43);
 }
 
-.phone {
+.phone,
+.free {
   color: rgb(243, 125, 17);
 }
 
 .promo {
   margin-top: 4px;
   margin-bottom: 14px;
-}
-
-.free {
-  color: rgb(243, 125, 17);
-}
-
-.promo-text {
-  color: rgb(23, 101, 43);
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 /* ================= CONTACT BUTTONS ================= */
@@ -98,69 +83,25 @@ header {
   object-fit: cover;
 }
 
-/* ================= STATUS LABEL (GLOBAL) ================= */
-.status-label {
-  position: absolute;
-  bottom: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-
-  padding: 6px 12px;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 999px;
-  display: inline-block;
-  line-height: 1;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
-}
-
-/* Coming soon */
-.status-label.coming-soon {
-  background-color: #fff1c1;
-  color: #8a5a00;
-}
-
-/* Almost out of stock */
-.status-label.almost-out {
-  background-color: #ffe0e0;
-  color: #a00000;
-}
-
-/* Out of stock */
-.status-label.out-of-stock {
-  background-color: #ddd;
-  color: #555;
-}
-
-/* Special price */
-.status-label.special-price {
-  background-color: #e0ffe7;
-  color: #0f7a33;
-}
-
 /* ================= PRODUCTS GRID ================= */
 
 .products {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
-
   padding: 22px 14px 30px;
   margin: 0 auto 36px;
   max-width: 1100px;
-
   background: rgba(255, 255, 255, 0.6);
   border-radius: 18px;
 }
-
 
 /* ================= PRODUCT CARD ================= */
 
 .product {
   position: relative;
   background: rgba(0, 0, 0, 0.65);
-  padding: 18px 16px 56px;
+  padding: 18px 16px 56px; /* bottom space for label */
   border-radius: 16px;
   color: #ffffff;
 
@@ -171,8 +112,7 @@ header {
 
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-  overflow: hidden; /* safety for object-fit */
+  overflow: hidden;
 }
 
 .product:hover {
@@ -180,7 +120,7 @@ header {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
 }
 
-/* ================= PRODUCT IMAGE (STEP 4.2 FIX) ================= */
+/* ================= PRODUCT IMAGE ================= */
 
 .product img {
   width: 100%;
@@ -205,7 +145,7 @@ header {
   line-height: 1.25;
 }
 
-/* Improve text rendering */
+/* Improve text rendering (all devices) */
 .product p,
 .product h3 {
   text-rendering: optimizeLegibility;
@@ -221,12 +161,64 @@ header {
   opacity: 0.95;
 }
 
-/* ================= MOBILE FINE-TUNE ================= */
+/* ================= STATUS LABEL (GLOBAL) ================= */
+
+.status-label {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 999px;
+  line-height: 1;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+/* Status variants */
+.status-label.coming-soon {
+  background-color: #fff1c1;
+  color: #8a5a00;
+}
+
+.status-label.almost-out {
+  background-color: #ffe0e0;
+  color: #a00000;
+}
+
+.status-label.out-of-stock {
+  background-color: #ddd;
+  color: #555;
+}
+
+.status-label.special-price {
+  background-color: #e0ffe7;
+  color: #0f7a33;
+}
+
+/* ================= OUT OF STOCK STATE ================= */
+
+.product.out-of-stock {
+  opacity: 0.55;
+}
+
+.product.out-of-stock img {
+  filter: grayscale(100%);
+}
+
+.product.out-of-stock .price {
+  color: #aaa;
+}
+
+/* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
 
   .product {
     padding: 16px 14px 56px;
+    touch-action: manipulation;
   }
 
   .product h3 {
@@ -240,42 +232,17 @@ header {
   .price {
     font-size: 17px;
   }
-
-  /* ================= OUT OF STOCK VISUAL STATE ================= */
-
-  .product.out-of-stock {
-    opacity: 0.55;
-  }
-
-  .product.out-of-stock img {
-    filter: grayscale(100%);
-  }
-
-  .product.out-of-stock .price {
-    color: #aaa;
-  }
-
-/* ================= ACCESSIBILITY IMPROVEMENTS ================= */
-
-
-/* Ensure status is not color-only */
-.status-label {
-  text-transform: uppercase;
 }
 
-/* Improve mobile touch behavior */
-.product {
-  touch-action: manipulation;
-}
 /* ================= HEADER MOBILE POLISH ================= */
 
-  /* Bigger brand title */
+@media (max-width: 768px) {
+
   header h1 {
     font-size: 40px;
     margin-bottom: 10px;
   }
 
-  /* Make header info text more readable */
   .order-text,
   .order-alt,
   .promo {
@@ -283,15 +250,7 @@ header {
     line-height: 1.4;
   }
 
-  /* Match brand green for "or send us a message at" */
   .order-alt {
     color: rgb(23, 101, 43);
   }
-
-  /* Normalize contact icon sizes */
-  .contact-buttons img {
-    width: 46px;
-    height: 46px;
-  }
-
 }
