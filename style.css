@@ -215,4 +215,23 @@ header h1 {
   color: #0f7a33;
 }
 
+/* ================= ACCESSIBILITY IMPROVEMENTS ================= */
+
+/* Improve text rendering */
+.product p,
+.product h3 {
+  text-rendering: optimizeLegibility;
+}
+
+/* Ensure status is not color-only */
+.status-label {
+  text-transform: uppercase;
+}
+
+/* Improve mobile touch behavior */
+.product {
+  touch-action: manipulation;
+}
+
+  
 }
