@@ -178,4 +178,41 @@ header h1 {
   color: #aaa;
 }
 
+  /* ================= STATUS LABELS ================= */
+
+.status-label {
+  margin-top: 6px;
+  padding: 6px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 999px;
+  display: inline-block;
+  line-height: 1;
+  letter-spacing: 0.3px;
+}
+
+/* Coming soon */
+.status-label.coming-soon {
+  background-color: #fff1c1;
+  color: #8a5a00;
+}
+
+/* Almost out of stock */
+.status-label.almost-out {
+  background-color: #ffe0e0;
+  color: #a00000;
+}
+
+/* Out of stock */
+.status-label.out-of-stock {
+  background-color: #ddd;
+  color: #555;
+}
+
+/* Special price */
+.status-label.special-price {
+  background-color: #e0ffe7;
+  color: #0f7a33;
+}
+
 }
