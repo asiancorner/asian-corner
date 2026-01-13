@@ -81,7 +81,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px; /* spacing between icons */
+  gap: 16px;
 }
 
 .contact-buttons a {
@@ -96,21 +96,6 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* ================= PRODUCTS GRID ================= */
-
-.products {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-
-  padding: 22px 14px 30px;
-  margin: 0 auto 36px;
-  max-width: 1100px;
-
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 18px;
 }
 
 /* ================= STATUS LABEL (GLOBAL) ================= */
@@ -130,12 +115,52 @@ header {
   text-transform: uppercase;
 }
 
+/* Coming soon */
+.status-label.coming-soon {
+  background-color: #fff1c1;
+  color: #8a5a00;
+}
+
+/* Almost out of stock */
+.status-label.almost-out {
+  background-color: #ffe0e0;
+  color: #a00000;
+}
+
+/* Out of stock */
+.status-label.out-of-stock {
+  background-color: #ddd;
+  color: #555;
+}
+
+/* Special price */
+.status-label.special-price {
+  background-color: #e0ffe7;
+  color: #0f7a33;
+}
+
+/* ================= PRODUCTS GRID ================= */
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+
+  padding: 22px 14px 30px;
+  margin: 0 auto 36px;
+  max-width: 1100px;
+
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 18px;
+}
+
+
 /* ================= PRODUCT CARD ================= */
 
 .product {
   position: relative;
   background: rgba(0, 0, 0, 0.65);
-  padding: 18px 16px;
+  padding: 18px 16px 56px;
   border-radius: 16px;
   color: #ffffff;
 
@@ -160,8 +185,8 @@ header {
 .product img {
   width: 100%;
   max-width: 100%;
-  aspect-ratio: 1 / 1;     /* reserves space before load */
-  object-fit: contain;     /* no distortion */
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
   display: block;
   margin-bottom: 10px;
 }
@@ -180,6 +205,12 @@ header {
   line-height: 1.25;
 }
 
+/* Improve text rendering */
+.product p,
+.product h3 {
+  text-rendering: optimizeLegibility;
+}
+
 /* ================= PRICE ================= */
 
 .price {
@@ -195,7 +226,7 @@ header {
 @media (max-width: 768px) {
 
   .product {
-    padding: 16px 14px;
+    padding: 16px 14px 56px;
   }
 
   .product h3 {
@@ -224,56 +255,8 @@ header {
     color: #aaa;
   }
 
-  /* ================= STATUS LABELS ================= */
-  
-.status-label {
-  position: absolute;
-  bottom: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-
-  padding: 6px 10px;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 999px;
-  display: inline-block;
-  line-height: 1;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
-}
-
-
-/* Coming soon */
-.status-label.coming-soon {
-  background-color: #fff1c1;
-  color: #8a5a00;
-}
-
-/* Almost out of stock */
-.status-label.almost-out {
-  background-color: #ffe0e0;
-  color: #a00000;
-}
-
-/* Out of stock */
-.status-label.out-of-stock {
-  background-color: #ddd;
-  color: #555;
-}
-
-/* Special price */
-.status-label.special-price {
-  background-color: #e0ffe7;
-  color: #0f7a33;
-}
-
 /* ================= ACCESSIBILITY IMPROVEMENTS ================= */
 
-/* Improve text rendering */
-.product p,
-.product h3 {
-  text-rendering: optimizeLegibility;
-}
 
 /* Ensure status is not color-only */
 .status-label {
@@ -285,8 +268,6 @@ header {
   touch-action: manipulation;
 }
 /* ================= HEADER MOBILE POLISH ================= */
-
-@media (max-width: 768px) {
 
   /* Bigger brand title */
   header h1 {
