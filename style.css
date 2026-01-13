@@ -232,6 +232,33 @@ header h1 {
 .product {
   touch-action: manipulation;
 }
+/* ================= HEADER MOBILE POLISH ================= */
 
-  
+@media (max-width: 480px) {
+
+  /* Bigger brand title */
+  header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  /* Make header info text more readable */
+  .order-text,
+  .order-alt,
+  .promo {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+
+  /* Match brand green for "or send us a message at" */
+  .order-alt {
+    color: rgb(23, 101, 43);
+  }
+
+  /* Normalize contact icon sizes */
+  .contact-buttons img {
+    width: 46px;
+    height: 46px;
+  }
+
 }
