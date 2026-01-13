@@ -149,7 +149,7 @@ header h1 {
 
 /* ================= MOBILE FINE-TUNE ================= */
 
-@media (max-width: 480px) {
+@media (max-width: 768px)
 
   .product {
     padding: 16px 14px;
