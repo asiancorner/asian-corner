@@ -208,18 +208,21 @@ header {
   }
 
   /* ================= STATUS LABELS ================= */
+  
+.status-label {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
 
-  .status-label {
-    margin-top: 6px;
-    padding: 6px 10px;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 999px;
-    display: inline-block;
-    line-height: 1;
-    letter-spacing: 0.3px;
-    text-transform: uppercase;
-  }
+  padding: 6px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 999px;
+  display: inline-block;
+  line-height: 1;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
 }
 
 
