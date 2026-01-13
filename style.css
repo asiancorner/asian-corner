@@ -96,8 +96,9 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
 
-  /* Fix Viber icon visual size */
+/* Fix Viber icon visual size */
 .contact-buttons img[alt="Viber"] {
   transform: scale(1.15);
 }
