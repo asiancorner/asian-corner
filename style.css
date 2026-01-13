@@ -163,4 +163,19 @@ header h1 {
   .price {
     font-size: 17px;
   }
+
+  /* ================= OUT OF STOCK VISUAL STATE ================= */
+
+.product.out-of-stock {
+  opacity: 0.55;
+}
+
+.product.out-of-stock img {
+  filter: grayscale(100%);
+}
+
+.product.out-of-stock .price {
+  color: #aaa;
+}
+
 }
