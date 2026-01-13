@@ -149,7 +149,7 @@ header h1 {
 
 /* ================= MOBILE FINE-TUNE ================= */
 
-@media (max-width: 768px)
+@media (max-width: 768px) {
 
   .product {
     padding: 16px 14px;
@@ -169,30 +169,33 @@ header h1 {
 
   /* ================= OUT OF STOCK VISUAL STATE ================= */
 
-.product.out-of-stock {
-  opacity: 0.55;
-}
+  .product.out-of-stock {
+    opacity: 0.55;
+  }
 
-.product.out-of-stock img {
-  filter: grayscale(100%);
-}
+  .product.out-of-stock img {
+    filter: grayscale(100%);
+  }
 
-.product.out-of-stock .price {
-  color: #aaa;
-}
+  .product.out-of-stock .price {
+    color: #aaa;
+  }
 
   /* ================= STATUS LABELS ================= */
 
-.status-label {
-  margin-top: 6px;
-  padding: 6px 10px;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 999px;
-  display: inline-block;
-  line-height: 1;
-  letter-spacing: 0.3px;
+  .status-label {
+    margin-top: 6px;
+    padding: 6px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 999px;
+    display: inline-block;
+    line-height: 1;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+  }
 }
+
 
 /* Coming soon */
 .status-label.coming-soon {
@@ -237,7 +240,7 @@ header h1 {
 }
 /* ================= HEADER MOBILE POLISH ================= */
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
 
   /* Bigger brand title */
   header h1 {
