@@ -49,11 +49,11 @@ header h1 {
   color: rgb(23, 101, 43);
 }
 
-.phone,
-/* Promo headline (green) */
-.free {
-  color: rgb(23, 101, 43);
+.phone {
+  color: rgb(243, 125, 17); /* orange */
+  font-weight: 700;
 }
+
 
 /* Promo subline (orange) */
 .promo-text {
