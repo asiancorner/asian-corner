@@ -61,6 +61,11 @@ header h1 {
   color: rgb(243, 125, 17);
 }
 
+/* Promo headline (green) */
+.free {
+  color: rgb(23, 101, 43);
+}
+
 /* ================= CONTACT BUTTONS ================= */
 
 .contact-buttons {
