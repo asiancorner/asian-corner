@@ -85,6 +85,17 @@ header h1 {
 
 /* ================= PRODUCTS GRID ================= */
 
+.section-divider {
+  height: 1px;
+  width: 80%;
+  margin: 18px auto 24px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(0, 0, 0, 0.25),
+    transparent
+  );
+}
 .products {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -116,20 +127,24 @@ header h1 {
   overflow: hidden;
 }
 
-.product:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+@media (hover: hover) and (pointer: fine) {
+  .product:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+  }
 }
+
 
 /* ================= PRODUCT IMAGE ================= */
 
 .product img {
   width: 100%;
-  max-width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: contain;
+  padding: 8px; /* 👈 NEW */
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
   display: block;
-  margin-bottom: 10px;
 }
 
 /* ================= PRODUCT TEXT ================= */
